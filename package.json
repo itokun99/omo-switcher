@@ -1,6 +1,6 @@
 {
   "name": "@indrawandev/omo-switch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI switcher for oh-my-openagent configs",
   "author": "Indrawan <me@indrawan.dev>",
   "license": "MIT",
