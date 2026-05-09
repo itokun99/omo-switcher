@@ -1,9 +1,10 @@
 {
-  "name": "omo-switch",
+  "name": "@indrawandev/omo-switch",
   "version": "1.0.0",
   "description": "CLI switcher for oh-my-openagent configs",
   "author": "Indrawan <me@indrawan.dev>",
   "license": "MIT",
+  "private": false,
   "bin": {
     "omo-switch": "bin/omo-switch.js"
   },
