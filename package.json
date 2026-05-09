@@ -5,12 +5,18 @@
   "author": "Indrawan <me@indrawan.dev>",
   "license": "MIT",
   "bin": {
-    "omo-switch": "./bin/omo-switch.js"
+    "omo-switch": "bin/omo-switch.js"
   },
   "scripts": {
     "start": "node bin/omo-switch.js"
   },
-  "keywords": ["opencode", "oh-my-openagent", "omo", "config", "switcher"],
+  "keywords": [
+    "opencode",
+    "oh-my-openagent",
+    "omo",
+    "config",
+    "switcher"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/itokun99/omo-switcher.git"
