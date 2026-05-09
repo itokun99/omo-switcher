@@ -1,4 +1,4 @@
-# omo-switch
+# @indrawandev/omo-switch
 
 CLI switcher for [oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) configs.
 
@@ -7,13 +7,13 @@ Instantly swap between different model configurations for opencode without manua
 ## Installation
 
 ```bash
-npm install -g omo-switch
+npm install -g @indrawandev/omo-switch
 ```
 
 Or with bun:
 
 ```bash
-bun install -g omo-switch
+bun install -g @indrawandev/omo-switch
 ```
 
 ## Usage
@@ -30,6 +30,9 @@ omo-switch --current
 
 # Print content of a specific config
 omo-switch show optimized-high
+
+# Help
+omo-switch --help
 ```
 
 ## Features
