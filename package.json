@@ -1,0 +1,29 @@
+{
+  "name": "omo-switch",
+  "version": "1.0.0",
+  "description": "CLI switcher for oh-my-openagent configs",
+  "author": "Indrawan <me@indrawan.dev>",
+  "license": "MIT",
+  "bin": {
+    "omo-switch": "./bin/omo-switch.js"
+  },
+  "scripts": {
+    "start": "node bin/omo-switch.js"
+  },
+  "keywords": ["opencode", "oh-my-openagent", "omo", "config", "switcher"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itokun99/omo-switcher.git"
+  },
+  "bugs": {
+    "url": "https://github.com/itokun99/omo-switcher/issues"
+  },
+  "homepage": "https://github.com/itokun99/omo-switcher#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "bin",
+    "README.md"
+  ]
+}
