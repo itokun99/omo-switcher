@@ -1,16 +1,39 @@
 # @indrawandev/omo-switch
 
-CLI switcher for [oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) configs.
+CLI/TUI switcher for [oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) configs.
 
 Instantly swap between different model configurations for opencode without manually copying files.
 
 ## Installation
 
+### Go Binary (Recommended)
+
+```bash
+go install github.com/itokun99/omo-switch/cmd/omo-switch@latest
+```
+
+### Homebrew
+
+```bash
+brew tap itokun99/omo-switch
+brew install omo-switch
+```
+
+### From Source
+
+```bash
+git clone https://github.com/itokun99/omo-switch.git
+cd omo-switch
+go build -o omo-switch ./cmd/omo-switch
+```
+
+### npm
+
 ```bash
 npm install -g @indrawandev/omo-switch
 ```
 
-Or with bun:
+### bun
 
 ```bash
 bun install -g @indrawandev/omo-switch
@@ -18,22 +41,42 @@ bun install -g @indrawandev/omo-switch
 
 ## Usage
 
+### TUI Mode (Default)
+
 ```bash
-# List all available configs
-omo-switch --list
-
-# Switch to a config (validates schema + auto-backup before applying)
-omo-switch optimized-high
-
-# Show currently active config
-omo-switch --current
-
-# Print content of a specific config
-omo-switch show optimized-high
-
-# Help
-omo-switch --help
+omo-switch
 ```
+
+Opens an interactive terminal UI for browsing, searching, and switching configs. Use arrow keys or vim bindings to navigate. Press Enter to switch.
+
+### CLI Mode (Backward Compatible)
+
+```bash
+omo-switch --list          # List all configs
+omo-switch --current       # Show active config
+omo-switch claude          # Switch to claude config
+omo-switch show claude     # Show config content
+omo-switch --cli --list    # Explicit CLI mode
+```
+
+## Key Bindings
+
+| Key | Action |
+|-----|--------|
+| ↑/k | Move up |
+| ↓/j | Move down |
+| g/home | Jump to top |
+| G/end | Jump to bottom |
+| Enter | Switch to config |
+| s | Show config detail |
+| / | Search configs |
+| ? | Toggle help |
+| v | Validate all configs |
+| b | Backup manager |
+| d | Diff viewer |
+| i | Config info |
+| r | Reload configs |
+| q/Esc | Quit |
 
 ## Features
 
@@ -41,6 +84,16 @@ omo-switch --help
 - **Schema validation** — validates config has required `agents` key before applying
 - **Auto-backup** — backs up current active config to `~/.config/omo-switch/backups/` before every switch
 - **Grouped display** — configs grouped by Mono / Optimized / Low-Cost / Custom
+- **Interactive TUI** — browse, search, and switch configs with keyboard navigation
+- **Cross-platform** — builds for macOS, Linux, and Windows
+
+## Configuration
+
+Configs are stored in `~/.config/opencode/omo_configs/` as `omo-*.json` files.
+
+The active config is at `~/.config/opencode/oh-my-openagent.json`.
+
+Backups are stored in `~/.config/omo-switch/backups/`.
 
 ## Config Discovery
 
