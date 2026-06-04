@@ -95,6 +95,46 @@ The active config is at `~/.config/opencode/oh-my-openagent.json`.
 
 Backups are stored in `~/.config/omo-switch/backups/`.
 
+## Uninstall
+
+### Homebrew
+
+```bash
+brew uninstall omo-switch
+brew untap itokun99/omo-switch
+```
+
+### npm
+
+```bash
+npm uninstall -g @indrawandev/omo-switch
+```
+
+### bun
+
+```bash
+bun uninstall -g @indrawandev/omo-switch
+```
+
+### Go Binary
+
+```bash
+rm $(go env GOPATH)/bin/omo-switch
+```
+
+### From Source
+
+```bash
+rm /usr/local/bin/omo-switch  # or wherever you installed it
+```
+
+### Clean up data (optional)
+
+```bash
+rm -rf ~/.config/omo-switch/backups/  # Remove backups
+# Note: Config files in ~/.config/opencode/omo_configs/ are NOT removed
+```
+
 ## Config Discovery
 
 `omo-switch` auto-discovers all `omo-*.json` files from `~/.config/opencode/omo_configs/`.
